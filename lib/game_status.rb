@@ -48,3 +48,13 @@ end
 def over?(board)
     full?(board) || won?(board) || draw?(board)
 end
+
+def winner(board)
+   if(won?(board).class==Array)
+     win_indexes=won?(board)
+     a_winning_index=win_indexes[0]
+     board[a_winning_index]
+   else
+     nil
+   end
+end
